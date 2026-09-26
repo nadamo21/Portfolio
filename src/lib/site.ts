@@ -9,7 +9,7 @@ export const site = {
   location: "Alexandria, Egypt",
   url: (process.env.NEXT_PUBLIC_SITE_URL || "https://nada-mohamed-data.vercel.app").replace(/\/$/, ""),
   description:
-    "Nada Mohamed is a Data Analyst in Alexandria, Egypt, building Power BI reports, SQL data models and DAX measures for loyalty, retail and operations teams. Product Analyst at Loynova and freelance analyst with 95+ dashboards delivered.",
+    "Nada Mohamed is a Data Analyst in Alexandria, Egypt, building Power BI reports, SQL data models and DAX measures for loyalty, retail and operations teams. Product Analyst at Loynova, freelance analyst and tech content creator.",
   email: "nadamghrabia@gmail.com",
   whatsapp: {
     number: WHATSAPP_NUMBER,

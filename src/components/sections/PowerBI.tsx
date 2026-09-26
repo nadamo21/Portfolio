@@ -51,7 +51,7 @@ export function PowerBI() {
             <div>
               <p className="label-mono text-accent-strong">The report library</p>
               <h3 className="mt-3 text-[clamp(1.6rem,3.2vw,2.3rem)] font-semibold">
-                {dashboards.length} report pages from 95+ builds
+                Report pages from real client builds
               </h3>
             </div>
             <p className="max-w-md text-muted">

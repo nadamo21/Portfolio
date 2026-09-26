@@ -1,4 +1,4 @@
-import { ArrowDownRight, MapPin } from "lucide-react";
+import { ArrowDownRight, MapPin, Star } from "lucide-react";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
 import { InstagramIcon, TikTokIcon } from "@/components/ui/icons";
@@ -71,16 +71,14 @@ export function Hero() {
           </div>
           </div>
 
-          <div className="card absolute -bottom-4 -left-10 hidden w-[12.5rem] p-4 sm:block">
-            <p className="label-mono text-muted">Dashboards delivered</p>
-            <p className="mt-1 font-display text-3xl font-semibold">
-              95<span className="text-accent">+</span>
-            </p>
-            <svg viewBox="0 0 120 28" className="mt-2 h-7 w-full" aria-hidden>
-              {[8, 12, 10, 16, 14, 19, 17, 23, 21, 26].map((h, i) => (
-                <rect key={i} x={i * 12} y={28 - h} width="8" height={h} rx="1.5" className="fill-accent" opacity={0.35 + i * 0.065} />
+          <div className="card absolute -bottom-4 -left-10 hidden px-4 py-3.5 sm:block">
+            <p className="flex gap-0.5 text-gold" aria-label="Five-star client reviews">
+              {Array.from({ length: 5 }, (_, k) => (
+                <Star key={k} size={18} fill="currentColor" aria-hidden />
               ))}
-            </svg>
+            </p>
+            <p className="mt-1.5 text-sm font-semibold">Client reviews</p>
+            <p className="text-xs text-muted">Rated five stars on Khamsat</p>
           </div>
 
           <div className="card absolute top-2 -left-10 hidden items-center gap-3 px-4 py-3 sm:flex">
@@ -118,7 +116,14 @@ export function Hero() {
           </div>
 
           <ul className="mt-8 flex flex-wrap justify-center gap-2 text-sm sm:hidden" aria-label="Highlights">
-            <li className="rounded-full border border-line bg-surface px-3 py-1.5 font-medium">95+ dashboards</li>
+            <li className="flex items-center gap-1.5 rounded-full border border-line bg-surface px-3 py-1.5 font-medium">
+              <span className="flex text-gold" aria-hidden>
+                {Array.from({ length: 5 }, (_, k) => (
+                  <Star key={k} size={13} fill="currentColor" />
+                ))}
+              </span>
+              Client reviews
+            </li>
             <li className="rounded-full border border-line bg-surface px-3 py-1.5 font-medium">Kaggle Expert</li>
             <li className="flex items-center gap-2 rounded-full border border-line bg-surface py-1 pr-1.5 pl-3 font-medium">
               Tech content creator

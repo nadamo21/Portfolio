@@ -33,7 +33,7 @@ export default function OgImage() {
             </div>
           </div>
           <div style={{ display: "flex", fontSize: 28, color: "#9aa3b2" }}>
-            Loyalty, retail & operations analytics · 95+ dashboards delivered
+            Power BI · SQL · DAX · Python — loyalty, retail & operations analytics
           </div>
         </div>
         <div style={{ display: "flex", alignItems: "flex-end", gap: 16, position: "absolute", right: 72, bottom: 72 }}>

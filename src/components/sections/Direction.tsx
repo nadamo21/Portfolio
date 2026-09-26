@@ -5,7 +5,7 @@ const stages = [
     name: "Business Intelligence",
     status: "Where I work today",
     level: 1,
-    evidence: ["95+ Power BI dashboards delivered", "DAX, Power Query & data modelling", "DEPI Microsoft Power BI Engineer"],
+    evidence: ["Power BI dashboards for clients across industries", "DAX, Power Query & data modelling", "DEPI Microsoft Power BI Engineer"],
   },
   {
     name: "Advanced Analytics",

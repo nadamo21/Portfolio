@@ -38,7 +38,7 @@ export function About() {
               Since August 2025 I&apos;ve been a <span className="text-ink">Product Analyst at Loynova</span>, a
               loyalty-technology company, building the Power BI reporting behind loyalty programmes — points earning,
               redemption behaviour, merchant performance and campaign results. Alongside that I run a freelance practice
-              where I&apos;ve delivered <span className="text-ink">95+ dashboards across nine-plus industries</span>,
+              where I&apos;ve delivered <span className="text-ink">dashboards across nine-plus industries</span>,
               many of them for repeat clients.
             </p>
             <p>

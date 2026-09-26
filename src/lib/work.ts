@@ -460,7 +460,5 @@ export function caseStudyForDashboard(id: string) {
 }
 
 export const stats = {
-  delivered: 95,
   industries: 9,
-  samples: dashboards.length,
 };
