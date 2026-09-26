@@ -37,5 +37,6 @@ export const nav = [
   { id: "work", label: "Work" },
   { id: "power-bi", label: "Power BI" },
   { id: "experience", label: "Experience" },
+  { id: "reviews", label: "Reviews" },
   { id: "contact", label: "Contact" },
 ] as const;

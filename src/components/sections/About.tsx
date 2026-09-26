@@ -1,4 +1,4 @@
-import { Briefcase, GraduationCap, Languages, MapPin } from "lucide-react";
+import { Briefcase, Clapperboard, GraduationCap, Languages, MapPin } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { education, languages } from "@/lib/profile";
@@ -7,6 +7,7 @@ import { site } from "@/lib/site";
 const facts = [
   { icon: Briefcase, label: "Now", value: "Product Analyst, Loynova", sub: "Freelance on Khamsat & Upwork since Sep 2024" },
   { icon: GraduationCap, label: "Studied", value: education.degree, sub: `${education.school} · 2020–2024` },
+  { icon: Clapperboard, label: "Also", value: "Tech content creator", sub: "On Instagram & TikTok · @nada.mghrabia" },
   { icon: MapPin, label: "Based in", value: site.location, sub: "Working remotely with clients across the region" },
   {
     icon: Languages,
@@ -44,6 +45,17 @@ export function About() {
               Before analytics took over, I taught — coding at iSchool, robotics at Techno Future, and freelancing for
               aspiring analysts with EYouth. That habit of explaining things clearly carries straight into how I design
               reports.
+            </p>
+            <p>
+              I&apos;m also a <span className="text-ink">tech content creator</span>, sharing tech and data content on{" "}
+              <a href={site.links.instagram} target="_blank" rel="noopener noreferrer" className="text-ink underline decoration-accent/50 underline-offset-4 hover:text-accent-strong">
+                Instagram
+              </a>{" "}
+              and{" "}
+              <a href={site.links.tiktok} target="_blank" rel="noopener noreferrer" className="text-ink underline decoration-accent/50 underline-offset-4 hover:text-accent-strong">
+                TikTok
+              </a>
+              .
             </p>
           </Reveal>
 

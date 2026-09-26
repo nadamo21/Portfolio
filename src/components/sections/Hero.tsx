@@ -1,6 +1,7 @@
 import { ArrowDownRight, MapPin } from "lucide-react";
 import Image from "next/image";
 import { ButtonLink } from "@/components/ui/Button";
+import { InstagramIcon, TikTokIcon } from "@/components/ui/icons";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { site } from "@/lib/site";
 import { HeroChart } from "./HeroChart";
@@ -19,7 +20,7 @@ export function Hero() {
               <span className="absolute inset-0 animate-ping rounded-full bg-emerald-500/60 motion-reduce:animate-none" />
               <span className="relative size-2.5 rounded-full bg-emerald-500" />
             </span>
-            Product Analyst at Loynova · open to freelance projects
+            Product Analyst at Loynova · tech content creator · open to freelance
           </p>
 
           <HeroTitle />
@@ -47,20 +48,30 @@ export function Hero() {
           </ul>
         </div>
 
-        <div className="relative mx-auto w-full max-w-[22rem] sm:max-w-sm lg:max-w-none">
-          <div className="relative aspect-[4/5] overflow-hidden rounded-[1.75rem] border border-line shadow-card">
+        <div className="relative mx-auto w-full max-w-[20rem] sm:max-w-[23rem] lg:max-w-[26rem]">
+          <div className="relative">
+          {/* Orbit ring with data points, slowly rotating behind the portrait. */}
+          <div className="pointer-events-none absolute -inset-5 sm:-inset-7" aria-hidden>
+            <svg viewBox="0 0 200 200" className="size-full animate-[spin_60s_linear_infinite] motion-reduce:animate-none">
+              <circle cx="100" cy="100" r="98" fill="none" stroke="var(--line-strong)" strokeWidth="0.6" strokeDasharray="2 4" />
+              <circle cx="100" cy="2" r="2.6" fill="var(--accent)" />
+              <circle cx="185" cy="149" r="2" fill="var(--gold)" />
+              <circle cx="15" cy="149" r="1.6" fill="var(--accent)" opacity=".6" />
+            </svg>
+          </div>
+          <div className="relative aspect-square overflow-hidden rounded-full bg-[#0c1330] shadow-card ring-1 ring-line">
             <Image
               src="/images/nada.jpg"
-              alt="Nada Mohamed, data analyst, working on her laptop outdoors"
+              alt="Portrait of Nada Mohamed, data analyst"
               fill
               priority
-              sizes="(min-width: 1024px) 420px, (min-width: 640px) 384px, 88vw"
-              className="object-cover object-[50%_35%]"
+              sizes="(min-width: 1024px) 416px, (min-width: 640px) 368px, 320px"
+              className="scale-[1.04] object-cover"
             />
-            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black/45 to-transparent" aria-hidden />
+          </div>
           </div>
 
-          <div className="card absolute -bottom-6 -left-3 w-[13.5rem] p-4 sm:-left-8">
+          <div className="card absolute -bottom-4 -left-10 hidden w-[12.5rem] p-4 sm:block">
             <p className="label-mono text-muted">Dashboards delivered</p>
             <p className="mt-1 font-display text-3xl font-semibold">
               95<span className="text-accent">+</span>
@@ -72,7 +83,7 @@ export function Hero() {
             </svg>
           </div>
 
-          <div className="card absolute -top-4 -right-2 flex items-center gap-3 px-4 py-3 sm:-right-6">
+          <div className="card absolute top-2 -left-10 hidden items-center gap-3 px-4 py-3 sm:flex">
             <span className="flex size-9 items-center justify-center rounded-full bg-gold-soft font-display text-sm font-bold text-gold">
               K
             </span>
@@ -81,6 +92,44 @@ export function Hero() {
               <p className="text-xs text-muted">Data science notebooks</p>
             </div>
           </div>
+
+          <div className="card absolute -right-8 bottom-10 hidden px-4 py-3 sm:block">
+            <p className="text-sm font-semibold">Tech content creator</p>
+            <div className="mt-2 flex gap-2">
+              <a
+                href={site.links.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nada on Instagram (opens in a new tab)"
+                className="flex size-8 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-accent hover:text-accent-strong"
+              >
+                <InstagramIcon size={15} />
+              </a>
+              <a
+                href={site.links.tiktok}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Nada on TikTok (opens in a new tab)"
+                className="flex size-8 items-center justify-center rounded-full border border-line text-muted transition-colors hover:border-accent hover:text-accent-strong"
+              >
+                <TikTokIcon size={15} />
+              </a>
+            </div>
+          </div>
+
+          <ul className="mt-8 flex flex-wrap justify-center gap-2 text-sm sm:hidden" aria-label="Highlights">
+            <li className="rounded-full border border-line bg-surface px-3 py-1.5 font-medium">95+ dashboards</li>
+            <li className="rounded-full border border-line bg-surface px-3 py-1.5 font-medium">Kaggle Expert</li>
+            <li className="flex items-center gap-2 rounded-full border border-line bg-surface py-1 pr-1.5 pl-3 font-medium">
+              Tech content creator
+              <a href={site.links.instagram} target="_blank" rel="noopener noreferrer" aria-label="Instagram (opens in a new tab)" className="flex size-7 items-center justify-center rounded-full bg-surface-2 text-muted">
+                <InstagramIcon size={14} />
+              </a>
+              <a href={site.links.tiktok} target="_blank" rel="noopener noreferrer" aria-label="TikTok (opens in a new tab)" className="flex size-7 items-center justify-center rounded-full bg-surface-2 text-muted">
+                <TikTokIcon size={14} />
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </section>

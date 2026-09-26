@@ -75,9 +75,13 @@ const jsonLd = {
   address: { "@type": "PostalAddress", addressLocality: "Alexandria", addressCountry: "EG" },
   worksFor: { "@type": "Organization", name: "Loynova" },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Alexandria University" },
+  hasOccupation: [
+    { "@type": "Occupation", name: "Data Analyst" },
+    { "@type": "Occupation", name: "Tech content creator" },
+  ],
   knowsAbout: ["Data Analysis", "Business Intelligence", "Power BI", "DAX", "SQL", "Python", "Data Visualization"],
   knowsLanguage: ["ar", "en"],
-  sameAs: [site.links.linkedin, site.links.upwork, site.links.khamsat],
+  sameAs: [site.links.linkedin, site.links.upwork, site.links.khamsat, site.links.instagram, site.links.tiktok],
 };
 
 // Runs before paint so the saved or system theme never flashes.

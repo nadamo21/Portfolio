@@ -1,6 +1,6 @@
 import { ArrowUpRight, FileText, Mail } from "lucide-react";
 import Link from "next/link";
-import { LinkedInIcon } from "@/components/ui/icons";
+import { InstagramIcon, LinkedInIcon, TikTokIcon } from "@/components/ui/icons";
 import { Reveal } from "@/components/ui/Reveal";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { site } from "@/lib/site";
@@ -10,6 +10,8 @@ const channels = [
   { label: "LinkedIn", href: site.links.linkedin, icon: <LinkedInIcon size={16} /> },
   { label: "Upwork", href: site.links.upwork },
   { label: "Khamsat", href: site.links.khamsat },
+  { label: "Instagram", href: site.links.instagram, icon: <InstagramIcon size={16} /> },
+  { label: "TikTok", href: site.links.tiktok, icon: <TikTokIcon size={15} /> },
   { label: "Résumé (PDF)", href: site.links.resume, icon: <FileText size={16} aria-hidden /> },
 ];
 

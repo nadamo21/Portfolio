@@ -63,12 +63,12 @@ export function Nav() {
             alt=""
             width={34}
             height={34}
-            className="size-[34px] rounded-full object-cover object-[50%_28%] ring-2 ring-gold/70"
+            className="size-[34px] rounded-full object-cover object-[50%_40%] ring-2 ring-gold/70"
             priority
           />
           <span className="font-display text-[0.95rem] font-semibold tracking-tight">
             {site.name}
-            <span className="ml-2 hidden text-muted sm:inline">· {site.role}</span>
+            <span className="ml-2 hidden text-muted xl:inline">· {site.role}</span>
           </span>
         </Link>
 

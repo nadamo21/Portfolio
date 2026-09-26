@@ -8,10 +8,10 @@ import { reviews } from "@/lib/profile";
 import { site } from "@/lib/site";
 
 export function Reviews() {
-  const [lang, setLang] = useState<"en" | "ar">("en");
+  const [lang, setLang] = useState<"en" | "ar">("ar");
 
   return (
-    <section aria-labelledby="reviews-title" className="py-24 md:py-32">
+    <section id="reviews" aria-labelledby="reviews-title" className="py-24 md:py-32">
       <div className="container-x">
         <SectionHeading
           index="09"
@@ -24,7 +24,7 @@ export function Reviews() {
               <a href={site.links.khamsat} target="_blank" rel="noopener noreferrer" className="text-accent-strong underline-offset-4 hover:underline">
                 Khamsat
               </a>
-              , originally written in Arabic.
+              , shown in the original Arabic — switch to English anytime.
             </>
           }
         />
@@ -32,8 +32,8 @@ export function Reviews() {
         <div role="group" aria-label="Review language" className="mb-8 inline-flex rounded-full border border-line bg-surface p-1">
           {(
             [
+              ["ar", "العربية"],
               ["en", "English translation"],
-              ["ar", "العربية · original"],
             ] as const
           ).map(([key, label]) => (
             <button
